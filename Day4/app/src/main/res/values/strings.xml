@@ -3,4 +3,7 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="green">Зеленый</string>
+    <string name="red">Красный</string>
+    <string name="yellow">Жёлтый</string>
 </resources>
