@@ -71,14 +71,9 @@ public class MainActivity extends ActionBarActivity {
         //onClickButton(view.getId());
     }
 
-   /* private void onClickButton(int button){
-        int text = R.string.red;
-        int color = R.color.redColor;
+  /*  private void onClickButton(int button){
+        int text, color;
         switch(button){
-            case R.id.buttonRed:
-                text= R.string.red;
-                color = R.color.redColor;
-                break;
             case R.id.buttonYellow:
                 text= R.string.yellow;
                 color = R.color.yellowColor;
@@ -87,6 +82,9 @@ public class MainActivity extends ActionBarActivity {
                 text= R.string.green;
                 color = R.color.greenColor;
                 break;
+            default:
+                text= R.string.red;
+                color = R.color.redColor;
         }
         mInfoView.setText(text);
         mRelativeLayout.setBackgroundColor(getResources().getColor(color));
