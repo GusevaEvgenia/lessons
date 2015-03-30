@@ -4,14 +4,36 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 
 public class MainActivity extends ActionBarActivity {
+
+    private RelativeLayout mRelativeLayout;
+    private TextView mInfoView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mRelativeLayout = (RelativeLayout) findViewById(R.id.relativeLayout);
+        mInfoView = (TextView) findViewById(R.id.textView);
+
+        Button yellowButton = (Button)findViewById(R.id.buttonYellow);
+        yellowButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mInfoView.setText(R.string.yellow);
+                mRelativeLayout.setBackgroundColor(getResources().getColor(R.color.yellowColor));
+                //onClickButton(v.getId());
+            }
+        });
+
+
     }
 
 
@@ -36,4 +58,37 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void onRedButtonClick(View view) {
+        mInfoView.setText(R.string.red);
+        mRelativeLayout.setBackgroundColor(getResources().getColor(R.color.redColor));
+        //onClickButton(view.getId());
+    }
+
+    public void onGreenButtonClick(View view) {
+        mInfoView.setText(R.string.green);
+        mRelativeLayout.setBackgroundColor(getResources().getColor(R.color.greenColor));
+        //onClickButton(view.getId());
+    }
+
+   /* private void onClickButton(int button){
+        int text = R.string.red;
+        int color = R.color.redColor;
+        switch(button){
+            case R.id.buttonRed:
+                text= R.string.red;
+                color = R.color.redColor;
+                break;
+            case R.id.buttonYellow:
+                text= R.string.yellow;
+                color = R.color.yellowColor;
+                break;
+            case R.id.buttonGreen:
+                text= R.string.green;
+                color = R.color.greenColor;
+                break;
+        }
+        mInfoView.setText(text);
+        mRelativeLayout.setBackgroundColor(getResources().getColor(color));
+    }*/
 }
