@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">Day6</string>
 
-    <string name="hello_world">Hello world!</string>
+    <string name="text_area">Что-то там...</string>
+    <string name="button_1">Первая кнопка</string>
+    <string name="button_2">Вторая кнопка</string>
+    <string name="button_3">Третья кнопка</string>
+    <string name="button_4">Четвертая кнопка</string>
+    <string name="button_5">Пятая кнопка</string>
+    <string name="button_6">Шестая кнопка</string>
     <string name="action_settings">Settings</string>
 </resources>
